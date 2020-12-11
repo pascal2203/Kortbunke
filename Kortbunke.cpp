@@ -1,16 +1,16 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-// 0=spar, 1=klør, 2=ruder, 3=hjearte };
+// 0=spar, 1=klÃ¸r, 2=ruder, 3=hjearte };
 class kort
 {
 public:
-	int fave;
+	int farve;
 	int num;
 	char tegn;
-	kort(int fave, int num)
+	kort(int farve, int num)
 	{
-		this->fave = fave;
+		this->farve = farve;
 		this->num = num;
 		if (num == 1)
 			tegn = 'A';
@@ -51,11 +51,11 @@ int main()
 {
 	bunken spil(false);
 	kort etkort = spil.tagkort();
-	std::cout << "color " << etkort.fave << "\nnum " << etkort.num << " " << etkort.tegn << std::endl;
+	std::cout << "color " << etkort.farve << "\nnum " << etkort.num << " " << etkort.tegn << std::endl;
 
 	spil.blande();
 	kort ss = spil.tagkort();
-	std::cout << "color " << ss.fave << "\nnum " << ss.num << " " << ss.tegn << std::endl;
+	std::cout << "color " << ss.farve << "\nnum " << ss.num << " " << ss.tegn << std::endl;
 	system("pause");
 	return 0;
 }
